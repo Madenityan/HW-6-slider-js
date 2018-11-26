@@ -2,21 +2,40 @@
     box-sizing:border-box
 }
 
+.main-wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+
 #container-slider {
-    max-width: 900px;
     position: relative;
-    margin: auto;
-    user-select: none;
-    padding: 10px;
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 #wrapper-slides {
     position: relative;
     overflow: hidden;
+    width: calc(100% * 3);
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .slides {
+    width: calc(100%/3);
+}
+
+.img-slide {
     width: 100%;
+}
+
+#wrapper-slides .slides {
+    float: left;
 }
 
 .btn-prev, .btn-next {
@@ -41,10 +60,10 @@
 }
 
 .container-circle-btn {
-    position: absolute;
+    /*position: absolute;*/
     text-align: center;
-    bottom: 4%;
-    left: 50%;
+    /*bottom: 4%;*/
+    /*left: 50%;*/
 }
 
 .circle {
