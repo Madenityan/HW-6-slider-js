@@ -4,6 +4,7 @@ let slideWrapper = document.getElementById('wrapper-slides');
 let containerSlider = document.getElementById('container-slider');
 let translateWidth = 0;
 let slideInterval = 3000;
+let img = document.getElementsByClassName('slides');
 
 // function nextSlide() {
 //
@@ -22,8 +23,6 @@ let slideInterval = 3000;
 // };
 
 function show() {
-    let img = document.getElementsByClassName('slides');
-
     for (let i = 0; i < img.length; i++) {
         img[i].style.display = 'none';
     }
@@ -35,15 +34,32 @@ function show() {
     img[currentSlide -1].style.display = "block";
 }
 
-show();
-
-
 function next() {
+    for (let i = 0; i < img.length; i++) {
+        img[i].style.display = 'none';
+    }
+    currentSlide ++;
 
-
-
+    if (currentSlide > img.length) {
+        currentSlide = 1
+    }
+    img[currentSlide -1].style.display = "block";
 }
 
+function prev() {
+    for (let i = 0; i < img.length; i++) {
+        img[i].style.display = 'none';
+    }
+    currentSlide ++;
+
+    if (currentSlide > img.length) {
+        currentSlide = 1
+    }
+    img[currentSlide -1].style.display = "block";
+}
+
+
+show();
 
 // window.onload = ()=> {
 //     setInterval(show, slideInterval);

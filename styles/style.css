@@ -5,8 +5,9 @@
 #container-slider {
     max-width: 900px;
     position: relative;
-    margin: 0 auto;
+    margin: auto;
     user-select: none;
+    padding: 10px;
 }
 
 #wrapper-slides {
@@ -40,7 +41,10 @@
 }
 
 .container-circle-btn {
+    position: absolute;
     text-align: center;
+    bottom: 4%;
+    left: 50%;
 }
 
 .circle {
@@ -49,8 +53,8 @@
     background-color: #cdcdcd;
     border: none;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height:15px;
     text-align: center;
     margin: 0 2px;
 }
