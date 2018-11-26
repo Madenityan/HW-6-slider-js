@@ -1,0 +1,55 @@
+* {
+    box-sizing:border-box
+}
+
+#container-slider {
+    max-width: 900px;
+    position: relative;
+    margin: 0 auto;
+    user-select: none;
+}
+
+#wrapper-slides {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    width: 100%;
+}
+
+.btn-prev, .btn-next {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 20px;
+    padding: 17px;
+    cursor: pointer;
+}
+
+.btn-next {
+    right: 0;
+}
+
+.container-circle-btn {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+    outline: none;
+    background-color: #cdcdcd;
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.circle:active {
+    background-color: #5380d2;
+}
