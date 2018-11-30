@@ -12,7 +12,7 @@
     display: table;
     width: 100%;
     overflow: hidden;
-    transition: 2s;
+    transition: 3s;
     transition-timing-function: ease-in-out;
 }
 
@@ -43,7 +43,7 @@
     border: none;
     outline: none;
     position: absolute;
-    top: 40%;
+    top: 38%;
     color: white;
     font-size: 40px;
     padding: 17px;
@@ -76,8 +76,8 @@
     background-color: #cdcdcd;
     border: none;
     cursor: pointer;
-    width: 15px;
-    height:15px;
+    width: 13px;
+    height:13px;
     text-align: center;
     margin: 0 2px;
 }
