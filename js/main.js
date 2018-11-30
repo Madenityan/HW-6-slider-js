@@ -13,36 +13,35 @@ function infinitySlide() {
     } else {
         translateWidth = -containerSlider.offsetWidth * currentSlide;
         slideWrapper.style.transform = 'translate(' + translateWidth + 'px, 0)';
-        currentSlide ++;
+        currentSlide++;
     }
 }
 
-function prev () {
-    if(currentSlide >= slideAll || currentSlide <= 0) {
-        translateWidth = -containerSlider.offsetWidth * currentSlide -1;
+function prev() {
+    if (currentSlide === 1 || currentSlide > slideAll || currentSlide <= 0) {
+        translateWidth = -containerSlider.offsetWidth * (slideAll - 1);
         slideWrapper.style.transform = 'translate(' + translateWidth + 'px, 0)';
         currentSlide = slideAll;
-    } else  {
-        translateWidth = -containerSlider.offsetWidth * currentSlide -2;
+    } else {
+        translateWidth = -containerSlider.offsetWidth * (slideAll - 2);
         slideWrapper.style.transform = 'translate(' + translateWidth + 'px, 0)';
-        currentSlide --;
+        currentSlide--;
     }
 }
 
 function next() {
-    if(currentSlide >= slideAll || currentSlide <= 0) {
-        translateWidth = -containerSlider.offsetWidth * currentSlide +1;
+    if (currentSlide === slideAll || currentSlide <= 0 || currentSlide > slideAll) {
         slideWrapper.style.transform = 'translate(' + translateWidth + 'px, 0)';
-        currentSlide = slideAll;
-    } else  {
-        translateWidth = -containerSlider.offsetWidth * currentSlide +2;
+        currentSlide = 1;
+    } else {
+        translateWidth = -containerSlider.offsetWidth * (currentSlide);
         slideWrapper.style.transform = 'translate(' + translateWidth + 'px, 0)';
-        currentSlide ++;
+        currentSlide++;
     }
 }
 
 function nav(event) {
-    btnIndex = this.event.target;
+    btnIndex = event.target;
     console.log(btnIndex);
     if (btnIndex + 1 !== currentSlide) {
         translateWidth = -containerSlider.offsetWidth * btnIndex;
@@ -53,8 +52,10 @@ function nav(event) {
 
 
 window.onload = ()=> {
-    setInterval(infinitySlide, slideInterval);
+    // setInterval(infinitySlide, slideInterval);
 };
+
+
 
 // function show() {
 //     for (let i = 0; i < img.length; i++) {
